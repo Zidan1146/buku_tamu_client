@@ -1,26 +1,30 @@
-@import "compass/css3";
 body{
     font-family: 'Harry P';
     src: url('harry_p/HARRYP__.TTF') format('ttf')
 }
-
-*, *:before, *:after {
-  box-sizing: border-box;
+:root{
+  
   --body-bg: #c1bdba;
-  --form-bg: #13232f;
+  --form-bg: 19, 35, 47;
   --white: #ffffff;
+  --white-rgb: 225,225,225;
   
   --main: #1ab188;
-  --main-light: lighten(var(--main,5%));
-  --main-dark: darken(var(--main,5%));
+  --main-light: lighten(var(--main),5%);
+  --main-dark: darken(var(--main),5%);
   
   --gray-light: #a0b3b0;
+  --gray-light-rgb: 160, 179, 176;
   --gray: #ddd;
   
   --thin: 300;
   --normal: 400;
   --bold: 600;
   --br: 4px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 html {
@@ -45,7 +49,7 @@ a:hover {
   background:rgba(var(--form-bg),.9);
   padding: 40px;
   max-width:600px;
-  margin:40px auto;
+  margin:auto;
   border-radius:var(--br);
   box-shadow:0 4px 10px 4px rgba(var(--form-bg),.3);
 }
@@ -64,7 +68,7 @@ li a {
     display:block;
     text-decoration:none;
     padding:15px;
-    background:rgba(var(--gray-light,.25));
+    background:rgba(var(--gray-light-rgb),.25);
     color:var(--gray-light);
     font-size:20px;
     float:left;
@@ -98,7 +102,7 @@ label {
   position:absolute;
   transform:translateY(6px);
   left:13px;
-  color:rgba(var(--white,.5));
+  color:rgba(var(--white-rgb,.5));
   transition:all 0.25s ease;
   backface-visibility: hidden;
   pointer-events: none;
