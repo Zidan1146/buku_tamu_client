@@ -19,24 +19,24 @@
               <div id="sendiri">   
                 <h1>Silahkan Isi Terlebih Dahulu</h1>
                 
-                <form action="/" method="post">
+                <form action="{{ url('login') }}" method="post">
                 
       
                 <div class="field-wrap">
                   <label>
-                    Asal Instansi<span class="req">*</span>
+                    Asal Instansi
                   </label>
-                  <input type="email"required autocomplete="off"/>
+                  <input type="text" name="instansi"required/>
                 </div>
                 
                 <div class="field-wrap">
                   <label>
-                    Set A Password<span class="req">*</span>
+                    Nama
                   </label>
-                  <input type="password"required autocomplete="off"/>
+                  <input type="text" name="nama"required autocomplete="off"/>
                 </div>
                 
-                <button type="submit" class="button button-block">Get Started</button>
+                <button type="submit" class="button button-block">Masuk</button>
                 
                 </form>
       
@@ -47,21 +47,51 @@
                 
                 <form action="/" method="post">
                 
-                  <div class="field-wrap">
-                  <label>
-                    Email Address<span class="req">*</span>
-                  </label>
-                  <input type="email"required autocomplete="off"/>
-                </div>
-                
+                  
                 <div class="field-wrap">
                   <label>
-                    Password<span class="req">*</span>
+                    Asal Instansi
                   </label>
-                  <input type="password"required autocomplete="off"/>
+                  <input type="text" name="instansi"required/>
                 </div>
                 
-                <button class="button button-block">Log In</button>
+                <div class="add-row">
+                  <div class="field-wrap">
+                      <label>
+                        Jumlah Orang
+                      </label>
+                    <select name="jumlah" required>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+
+                  <div class="field-list">
+                    <div class="field-wrap">
+                      <label>
+                        Nama
+                      </label>
+                      <input type="text" name="nama" required autocomplete="off"/>
+                    </div>
+
+                    <div class="field-wrap">
+                      <label>
+                        Nama
+                      </label>
+                      <input type="text" name="nama2" required autocomplete="off"/>
+                    </div>
+                  </div>
+                </div>
+                
+                <button type="submit" class="button button-block">Masuk</button>
                 
                 </form>
       

@@ -1,13 +1,9 @@
-body{
-    font-family: 'Harry P';
-    src: url('harry_p/HARRYP__.TTF') format('ttf')
-}
 :root{
   
   --body-bg: #c1bdba;
   --form-bg: 19, 35, 47;
   --white: #ffffff;
-  --white-rgb: 225,225,225;
+  --white-rgb: 255,255,255;
   
   --main: #1ab188;
   --main-light: lighten(var(--main),5%);
@@ -27,13 +23,21 @@ body{
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Harry P';
+  src: url('harry_p/HARRYP__.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
-	overflow-y: scroll; 
+	overflow-y: none; 
 }
 
 body {
   background:var(--body-bg);
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Harry P';
+  overflow: hidden;
 }
 
 a {
@@ -109,19 +113,10 @@ label {
   font-size:22px;
 }
 
-label.req {
-    margin:2px;
-    color:var(--main);
-}
-
 label.active {
   transform:translateY(50px);
   left:2px;
   font-size:14px;
-}
-
-label.active.req {
-    opacity:0;
 }
 
 label.highlight {
@@ -157,20 +152,20 @@ textarea {
   margin-bottom:40px;
 }
 
-.top-row:after {
+.add-row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.top-row > div {
+.add-row > div {
     float:left;
-    width:48%;
-    margin-right:4%;
+    width:68%;
 }
 
-.top-row > div:last-child { 
-    margin:0;
+.add-row > div:first-child {
+    margin-right:4%;
+    width: 28%;
 }
 
 .button {
@@ -198,7 +193,13 @@ textarea {
   width:100%;
 }
 
-.forgot {
-  margin-top:-20px;
-  text-align:right;
+.star {
+  position: absolute;
+  width: 10px; /* Adjust size */
+  height: 10px; /* Adjust size */
+  background-color: yellow;
+  clip-path: polygon(50% 0%, 70% 40%, 100% 50%, 70% 60%, 50% 100%, 30% 60%, 0% 50%, 30% 40%);
+  opacity: 0.8;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  pointer-events: none;
 }
