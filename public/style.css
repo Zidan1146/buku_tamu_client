@@ -123,7 +123,8 @@ label.highlight {
 	color:var(--white);
 }
 
-input, textarea {
+input, textarea, select {
+  font-family: 'Harry P';
   font-size:22px;
   display:block;
   width:100%;
@@ -186,6 +187,10 @@ textarea {
 
 .button:hover, .button:focus {
     background:var(--main-dark);
+}
+
+select *{
+  background-color: rgb(12, 12, 12);
 }
 
 .button-block {

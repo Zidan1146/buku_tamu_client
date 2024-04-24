@@ -57,10 +57,10 @@
                 
                 <div class="add-row">
                   <div class="field-wrap">
-                      <label>
+                      <!-- <label class="active highlight">
                         Jumlah Orang
-                      </label>
-                    <select name="jumlah" required>
+                      </label> -->
+                    <select id="jumlah" name="jumlah" label="Jumlah Orang" required>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>

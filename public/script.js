@@ -1,4 +1,4 @@
-$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+$('.form').find('input, textarea, select').on('keyup blur focus', function (e) {
   
     var $this = $(this),
         label = $this.prev('label');
@@ -16,13 +16,7 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
               label.removeClass('highlight');   
               }   
       } else if (e.type === 'focus') {
-        
-        if( $this.val() === '' ) {
-              label.removeClass('highlight'); 
-              } 
-        else if( $this.val() !== '' ) {
-              label.addClass('highlight');
-              }
+        label.addClass('active highlight');
       }
   
 });
@@ -40,6 +34,23 @@ $('.tab a').on('click', function (e) {
   
   $(target).fadeIn(600);
     
+});
+
+$('#jumlah').on('change', function (e) {
+  
+  jumlah = this.value;
+
+  if (jumlah==1) {
+    target = $(this).attr('href');
+    
+    $('.tab-content > div').not(target).hide();
+    
+    $(target).fadeIn(600);
+
+    $(".tab.active").removeClass('active');
+    $(".tab").not('.active').addClass('active');
+  }
+
 });
 
 // script.js
