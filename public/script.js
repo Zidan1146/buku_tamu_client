@@ -39,16 +39,40 @@ $('.tab a').on('click', function (e) {
 $('#jumlah').on('change', function (e) {
   
   jumlah = this.value;
+  aslinya = $('#field-list').children().length;
 
   if (jumlah==1) {
-    target = $(this).attr('href');
+    rombongan = $('.tab.active');
+    sendiri = $('.tab').not('.active');
     
-    $('.tab-content > div').not(target).hide();
+    sendiri.addClass('active');
+    rombongan.removeClass('active');
     
-    $(target).fadeIn(600);
+    $('#rombongan').hide();
+    
+    $('#sendiri').fadeIn(600);
 
-    $(".tab.active").removeClass('active');
-    $(".tab").not('.active').addClass('active');
+    this.value = 2;
+  }
+  else{
+    while (jumlah!=aslinya) {
+      if (jumlah > aslinya) {
+        $('#field-list').append(
+          '<div class="field-wrap">'+
+            '<label>'+
+              'Nama'+
+            '</label>'+
+            '<input type="text" name="nama" required="" autocomplete="off">'+
+          '</div>'
+      );
+      aslinya++
+      $('#field-list > :last-child input').attr('name', 'nama' + aslinya);
+      }
+      if (jumlah < aslinya) {
+        $('#field-list > :last-child').remove();
+        aslinya--;
+      }
+    }
   }
 
 });

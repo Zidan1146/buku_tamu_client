@@ -37,7 +37,6 @@ html {
 body {
   background:var(--body-bg);
   font-family: 'Harry P';
-  overflow: hidden;
 }
 
 a {

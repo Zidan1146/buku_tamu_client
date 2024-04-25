@@ -61,20 +61,20 @@
                         Jumlah Orang
                       </label> -->
                     <select id="jumlah" name="jumlah" label="Jumlah Orang" required>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
+                      <option value="1" id="1">1</option>
+                      <option value="2" id="2"selected>2</option>
+                      <option value="3" id="3">3</option>
+                      <option value="4" id="4">4</option>
+                      <option value="5" id="5">5</option>
+                      <option value="6" id="6">6</option>
+                      <option value="7" id="7">7</option>
+                      <option value="8" id="8">8</option>
+                      <option value="9" id="9">9</option>
+                      <option value="10" id="10">10</option>
                     </select>
                   </div>
 
-                  <div class="field-list">
+                  <div id="field-list">
                     <div class="field-wrap">
                       <label>
                         Nama
