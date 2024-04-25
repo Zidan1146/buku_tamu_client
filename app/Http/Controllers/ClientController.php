@@ -22,9 +22,11 @@ class ClientController extends Controller
                         "noTelepon"=>$hp
                     ]);
                 }
-             
             }
         }
         return redirect("/berhasil")->with("success","Data Berhasil Disimpan");
+    }
+    function logging(){
+        return view('logging');
     }
 }
