@@ -5,7 +5,7 @@
   --white: #ffffff;
   --white-rgb: 255,255,255;
   
-  --main: #1ab188;
+  --main: #b1951a;
   --main-light: lighten(var(--main),5%);
   --main-dark: darken(var(--main),5%);
   
@@ -113,7 +113,7 @@ label {
 }
 
 label.active {
-  transform:translateY(50px);
+  transform:translateY(-25px);
   left:2px;
   font-size:14px;
 }
@@ -149,15 +149,15 @@ textarea {
 
 .field-wrap {
   position:relative;
-  margin-bottom:40px;
+  margin-top:40px;
 }
 
 #field-list > .field-wrap {
-  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 #field-list > .field-wrap label.active {
-  transform:translateY(40px);
+  transform:translateY(-20px);
 }
 
 #field-list {
@@ -209,6 +209,7 @@ select *{
   font-family: 'Harry P'; 
   display:block;
   width:100%;
+  margin-top: 25px;
 }
 
 .star {
