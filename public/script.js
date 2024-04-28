@@ -69,7 +69,7 @@ $('#jumlah').on('change', function (e) {
           '</div>'
       );
       aslinya++
-      $('#field-list > :last-child input').attr('name', 'nama' + aslinya);
+      $('#field-list > :last-child input').attr('name', 'nama' + "["+aslinya+"]");
       }
       if (jumlah < aslinya) {
         $('#field-list > :last-child').remove();
