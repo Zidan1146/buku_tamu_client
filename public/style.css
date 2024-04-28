@@ -5,7 +5,7 @@
   --white: #ffffff;
   --white-rgb: 255,255,255;
   
-  --main: #1ab188;
+  --main: #b1951a;
   --main-light: lighten(var(--main),5%);
   --main-dark: darken(var(--main),5%);
   
@@ -49,10 +49,10 @@ a:hover {
 }
 
 .form {
-  background:rgba(var(--form-bg),.9);
+  background:rgba(var(--form-bg),.7);
   padding: 40px;
   max-width:600px;
-  margin:auto;
+  margin:100px auto;
   border-radius:var(--br);
   box-shadow:0 4px 10px 4px rgba(var(--form-bg),.3);
 }
@@ -113,7 +113,7 @@ label {
 }
 
 label.active {
-  transform:translateY(50px);
+  transform:translateY(-25px);
   left:2px;
   font-size:14px;
 }
@@ -149,7 +149,20 @@ textarea {
 
 .field-wrap {
   position:relative;
-  margin-bottom:40px;
+  margin-top:40px;
+}
+
+#field-list > .field-wrap {
+  margin-top: 25px;
+}
+
+#field-list > .field-wrap label.active {
+  transform:translateY(-20px);
+}
+
+#field-list {
+  overflow-y: auto;
+  height: 150px;
 }
 
 .add-row:after {
@@ -193,8 +206,10 @@ select *{
 }
 
 .button-block {
+  font-family: 'Harry P'; 
   display:block;
   width:100%;
+  margin-top: 25px;
 }
 
 .star {
