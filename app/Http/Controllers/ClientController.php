@@ -10,22 +10,21 @@ class ClientController extends Controller
     function login(Request $request){
         $validated=$request->validate([
             "nama"=>"required",
-            "instansi"=>"required",
-            "hp"=>"required"
+            "instansi"=>"required"
         ]);
-        foreach($request->nama as $index1=>$nama){
-            foreach($request->hp as $index2=>$hp){
-                if($index1 == $index2){
-                    Client::create([
-                        "nama"=>$nama,
-                        "instansi"=>$request->instansi,
-                        "noTelepon"=>$hp
-                    ]);
-                }
-            }
+        foreach ($request->nama as $nama){
+            Client::create([
+                "nama"=>$nama,
+                "instansi"=>$request->instansi,
+                "created_at"=>now(),
+                "updated_at"=>now()
+            ]);
+
         }
+          
         return redirect("/berhasil")->with("success","Data Berhasil Disimpan");
     }
+
     function logging(){
         return view('logging');
     }

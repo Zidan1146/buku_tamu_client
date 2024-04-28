@@ -9,6 +9,5 @@ class Client extends Model
 {
     use HasFactory;
     protected $table="tbl_tamu";
-    protected $fillabel=["nama","instansi","noTelepon"];
-    public $timestamps=false;
+    protected $fillable=["nama","instansi","noTelepon"];
 }

@@ -34,7 +34,7 @@
                 <label>
                   Nama
                 </label>
-                <input type="text" name="nama"required autocomplete="off"/>
+                <input type="text" name="nama[0]"required autocomplete="off"/>
               </div>
               
               <button type="submit" class="button button-block">Masuk</button>
@@ -78,14 +78,14 @@
                       <label>
                         Nama
                       </label>
-                      <input type="text" name="nama" required autocomplete="off"/>
+                      <input type="text" name="nama[0]" required autocomplete="off"/>
                     </div>
 
                     <div class="field-wrap">
                       <label>
                         Nama
                       </label>
-                      <input type="text" name="nama2" required autocomplete="off"/>
+                      <input type="text" name="nama[1]" required autocomplete="off"/>
                     </div>
                   </div>
                 </div>
