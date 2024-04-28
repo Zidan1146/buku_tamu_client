@@ -87,6 +87,7 @@ document.addEventListener('mousemove', function(e) {
     const star = document.createElement('div');
     star.className = 'star';
     container.appendChild(star);
+    $('#wand').css({top: `${e.pageY}px`, left: `${e.pageX}px`})
   
     // Set the initial position of the star
     star.style.left = `${e.pageX}px`;
@@ -104,3 +105,16 @@ document.addEventListener('mousemove', function(e) {
     }, 600); // Should match the longest transition time
   }, 25);
 });
+
+document.addEventListener('mousemove', function(e) {
+  
+})
+
+$('button, input, select, li a').on('mouseenter', function(e) {
+  $('#wand img').css({transform: 'rotate(-30deg) translate(15px, 0px)'})
+});
+
+$('button, input, select, li a').on('mouseout', function(e) {
+  $('#wand img').css({transform: 'rotate(0deg) translate(5px, 5px)'})
+});
+
