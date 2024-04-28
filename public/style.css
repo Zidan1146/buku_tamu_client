@@ -49,10 +49,10 @@ a:hover {
 }
 
 .form {
-  background:rgba(var(--form-bg),.9);
+  background:rgba(var(--form-bg),.7);
   padding: 40px;
   max-width:600px;
-  margin:auto;
+  margin:100px auto;
   border-radius:var(--br);
   box-shadow:0 4px 10px 4px rgba(var(--form-bg),.3);
 }
@@ -152,6 +152,19 @@ textarea {
   margin-bottom:40px;
 }
 
+#field-list > .field-wrap {
+  margin-bottom: 25px;
+}
+
+#field-list > .field-wrap label.active {
+  transform:translateY(40px);
+}
+
+#field-list {
+  overflow-y: auto;
+  height: 150px;
+}
+
 .add-row:after {
     content: "";
     display: table;
@@ -193,6 +206,7 @@ select *{
 }
 
 .button-block {
+  font-family: 'Harry P'; 
   display:block;
   width:100%;
 }

@@ -1,3 +1,4 @@
+setInterval(() => {
 $('.form').find('input, textarea, select').on('keyup blur focus', function (e) {
   
     var $this = $(this),
@@ -20,6 +21,8 @@ $('.form').find('input, textarea, select').on('keyup blur focus', function (e) {
       }
   
 });
+  
+}, 100);
   
 $('.tab a').on('click', function (e) {
     
