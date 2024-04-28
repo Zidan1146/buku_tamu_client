@@ -8,22 +8,24 @@
         <link rel="stylesheet" href="{{ asset('style.css') }}"/>
     </head>
     <body>
+      <a href="https://www.flaticon.com/free-icons/wand" title="wand icons" id="credit">Wand icons created by Freepik - Flaticon</a>
         <div class="form">
+          <h1>OPEN HOUSE</h1>
+          <h2>REKAYASA PERANGKAT LUNAK</h2>
           <ul class="tab-group">
             <li class="tab active"><a href="#sendiri">Sendiri</a></li>
             <li class="tab"><a href="#rombongan">Rombongan</a></li>
           </ul>
             
           <div class="tab-content">
-            <div id="sendiri">   
-              <h1>Silahkan Isi Terlebih Dahulu</h1>
+            <div id="sendiri"> 
               
               <form action="{{ url('login') }}" method="post">
               @csrf
     
               <div class="field-wrap">
                 <label>
-                  Asal Instansi
+                  Alamat/Instansi
                 </label>
                 <input type="text" name="instansi"required/>
               </div>
@@ -41,15 +43,13 @@
     
             </div>
               
-            <div id="rombongan">   
-              <h1>Silahkan Isi Oleh Seorang</h1>
-              
+            <div id="rombongan">
               <form action="{{ route('login') }}" method="post">
               @csrf
                 
               <div class="field-wrap">
                 <label>
-                  Asal Instansi
+                  Alamat/Instansi
                 </label>
                 <input type="text" name="instansi"required/>
               </div>
@@ -97,8 +97,12 @@
               </div>
               
             </div><!-- tab-content -->
-            
+          
       </div> <!-- /form -->
+      
+    <div id="wand">
+      <img src="{{ asset('magic-wand.png')}}" alt="">
+    </div>
       <script src="{{ asset('jquery.js')}}"></script>
       <script src="{{ asset('script.js')}}"></script>
     </body>

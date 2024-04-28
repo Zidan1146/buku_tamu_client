@@ -21,6 +21,7 @@
 
 *, *:before, *:after {
   box-sizing: border-box;
+  cursor: url('public\magic-wand.png'), none;
 }
 
 @font-face {
@@ -35,8 +36,9 @@ html {
 }
 
 body {
-  background:var(--body-bg);
+  background-image: url('BGHARRY.png');
   font-family: 'Harry P';
+  overflow: hidden;
 }
 
 a {
@@ -52,7 +54,7 @@ a:hover {
   background:rgba(var(--form-bg),.7);
   padding: 40px;
   max-width:600px;
-  margin:100px auto;
+  margin:100px auto 0px;
   border-radius:var(--br);
   box-shadow:0 4px 10px 4px rgba(var(--form-bg),.3);
 }
@@ -68,6 +70,7 @@ a:hover {
     clear: both;
 }
 li a {
+    font-family: 'Lexend';
     display:block;
     text-decoration:none;
     padding:15px;
@@ -77,7 +80,6 @@ li a {
     float:left;
     width:50%;
     text-align:center;
-    cursor:pointer;
     transition:.5s ease;
 }
 li a:hover {
@@ -98,12 +100,22 @@ h1 {
   text-align:center;
   color:var(--white);
   font-weight:var(--thin);
-  margin:0 0 40px;
+  margin-bottom: .5em;
+  font-size: 3em;
+}
+h2 {
+  text-align:center;
+  color:var(--white);
+  font-weight:var(--thin);
+  font-size: 2em;
 }
 
+
 label {
+  font-family: 'Lexend';
   position:absolute;
   transform:translateY(6px);
+  text-transform: uppercase;
   left:13px;
   color:rgba(var(--white-rgb,.5));
   transition:all 0.25s ease;
@@ -123,7 +135,7 @@ label.highlight {
 }
 
 input, textarea, select {
-  font-family: 'Harry P';
+  font-family: 'Lexend';
   font-size:22px;
   display:block;
   width:100%;
@@ -162,7 +174,7 @@ textarea {
 
 #field-list {
   overflow-y: auto;
-  height: 150px;
+  height: 125px;
 }
 
 .add-row:after {
@@ -203,6 +215,7 @@ textarea {
 
 select *{
   background-color: rgb(12, 12, 12);
+  cursor: url('public\magic-wand.png'), none;
 }
 
 .button-block {
@@ -210,6 +223,11 @@ select *{
   display:block;
   width:100%;
   margin-top: 25px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: .2em;
 }
 
 .star {
@@ -221,4 +239,21 @@ select *{
   opacity: 0.8;
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
   pointer-events: none;
+}
+
+#wand {
+  position: absolute;
+  pointer-events: none;
+}
+#wand > img {
+  transition: transform 0.2s ease-out;
+  width: 2em;
+  height: 2em;
+  transform: translate(5px, 5px);
+}
+
+#credit{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
