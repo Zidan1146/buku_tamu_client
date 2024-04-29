@@ -22,7 +22,7 @@ class ClientController extends Controller
 
         }
           
-        return redirect("/berhasil")->with("success","Data Berhasil Disimpan");
+        return redirect(route('logging'))->with("success","Data Berhasil Disimpan");
     }
 
     function logging(){

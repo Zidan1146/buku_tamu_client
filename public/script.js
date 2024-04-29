@@ -1,3 +1,11 @@
+
+$(document).ready(function() {
+  $('.select2').select2({
+    minimumResultsForSearch: -1,
+    dropdownParent: $("#selecting") 
+  });
+});
+
 setInterval(() => {
 $('.form').find('input, textarea, select').on('keyup blur focus', function (e) {
   
@@ -106,15 +114,18 @@ document.addEventListener('mousemove', function(e) {
   }, 25);
 });
 
-document.addEventListener('mousemove', function(e) {
+document.addEventListener('click', function(e) {
   
 })
 
-$('button, input, select, li a').on('mouseenter', function(e) {
-  $('#wand img').css({transform: 'rotate(-30deg) translate(15px, 0px)'})
+$('button, input, select, a, #selecting').on('mouseover', function(e) {
+  $('#wand img').css({transform: 'rotate(-30deg) translate(15px, 0px) '})
 });
 
-$('button, input, select, li a').on('mouseout', function(e) {
+$('button, input, select, a, #selecting').on('mouseleave', function(e) {
   $('#wand img').css({transform: 'rotate(0deg) translate(5px, 5px)'})
 });
 
+$('.popover').click(function () {
+  this.remove();
+})

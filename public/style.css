@@ -6,8 +6,9 @@
   --white-rgb: 255,255,255;
   
   --main: #b1951a;
-  --main-light: lighten(var(--main),5%);
-  --main-dark: darken(var(--main),5%);
+  --main-rgb: 177, 149, 26;
+  --main-light: lighten(var(--main), 1%);
+  --main-dark: rgba(var(--main-rgb), 25%);
   
   --gray-light: #a0b3b0;
   --gray-light-rgb: 160, 179, 176;
@@ -21,7 +22,7 @@
 
 *, *:before, *:after {
   box-sizing: border-box;
-  cursor: url('public\magic-wand.png'), none;
+  cursor: url('/magic-wand.png'), none;
 }
 
 @font-face {
@@ -134,7 +135,8 @@ label.highlight {
 	color:var(--white);
 }
 
-input, textarea, select {
+input, textarea, .select2-selection.select2-selection--single {
+  cursor: none;
   font-family: 'Lexend';
   font-size:22px;
   display:block;
@@ -174,7 +176,7 @@ textarea {
 
 #field-list {
   overflow-y: auto;
-  height: 125px;
+  height: 130px;
 }
 
 .add-row:after {
@@ -193,6 +195,35 @@ textarea {
     width: 28%;
 }
 
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-results__options {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.select2-results__option--selected {
+  background-color: #73777a !important;
+}
+
+.select2-results__option--selectable {
+  cursor: none;
+}
+
+.select2-selection__rendered {
+  color: var(--white) !important;
+}
+
+.select2-selection__arrow {
+  display: none;
+}
+select *{
+  background-color: rgb(12, 12, 12);
+  cursor: url('public\magic-wand.png'), none;
+}
+
 .button {
   border:0;
   outline:none;
@@ -208,15 +239,10 @@ textarea {
   appearance: none;
 }
 
-
 .button:hover, .button:focus {
     background:var(--main-dark);
 }
 
-select *{
-  background-color: rgb(12, 12, 12);
-  cursor: url('public\magic-wand.png'), none;
-}
 
 .button-block {
   font-family: 'Harry P'; 
@@ -242,6 +268,7 @@ select *{
 }
 
 #wand {
+  z-index: 1052;
   position: absolute;
   pointer-events: none;
 }
@@ -256,4 +283,43 @@ select *{
   position: absolute;
   bottom: 0px;
   right: 0px;
+  color: black;
+}
+
+
+
+
+
+.popover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 2em;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fade 3s;
+  opacity: 0%;
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0%;
+  }
+  25%{
+    opacity: 100%;
+  }
+  50%{
+    top: 50%;
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+    top: 100%;
+  }
+}
+.success {
+  background-color: #28a745;
 }
