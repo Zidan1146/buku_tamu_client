@@ -13,7 +13,7 @@ $('.form').find('input, textarea, select').on('keyup blur focus', function (e) {
         label = $this.prev('label');
   
         if (e.type === 'keyup') {
-              if ($this.val() === '') {
+          if ($this.val() === '') {
             label.removeClass('active highlight');
           } else {
             label.addClass('active highlight');
@@ -63,21 +63,21 @@ $('#jumlah').on('change', function (e) {
     
     $('#sendiri').fadeIn(600);
 
-    this.value = 2;
+    this.value = aslinya;
   }
   else{
     while (jumlah!=aslinya) {
       if (jumlah > aslinya) {
+        aslinya++;
         $('#field-list').append(
           '<div class="field-wrap">'+
             '<label>'+
-              'Nama'+
+              'Nama '+ aslinya +
             '</label>'+
             '<input type="text" name="nama" required="" autocomplete="off">'+
           '</div>'
-      );
-      aslinya++
-      $('#field-list > :last-child input').attr('name', 'nama' + "["+aslinya+"]");
+        );
+        $('#field-list > :last-child input').attr('name', 'nama' + "["+aslinya+"]");
       }
       if (jumlah < aslinya) {
         $('#field-list > :last-child').remove();
@@ -115,7 +115,7 @@ document.addEventListener('mousemove', function(e) {
 });
 
 document.addEventListener('click', function(e) {
-  
+
 })
 
 $('button, input, select, a, #selecting').on('mouseover', function(e) {
@@ -128,4 +128,18 @@ $('button, input, select, a, #selecting').on('mouseleave', function(e) {
 
 $('.popover').click(function () {
   this.remove();
+})
+
+$('#submit').click(function () {
+  $('.form').find('input, textarea, select').each(function(){
+      
+    var $this = $(this),
+        label = $this.prev('label');
+      
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.addClass('active highlight');
+    }
+  });
 })

@@ -21,8 +21,8 @@ class ClientController extends Controller
             ]);
 
         }
-          
-        return redirect(route('logging'))->with("success","Data Berhasil Disimpan");
+        
+        return back()->with("success","Data Berhasil Disimpan");
     }
 
     function logging(){

@@ -28,7 +28,7 @@
                 <label>
                   Alamat/Instansi
                 </label>
-                <input type="text" name="instansi"required/>
+                <input type="text" name="instansi"required autocomplete="off"/>
               </div>
               
               <div class="field-wrap">
@@ -38,7 +38,7 @@
                 <input type="text" name="nama[0]"required autocomplete="off"/>
               </div>
               
-              <button type="submit" class="button button-block">Masuk</button>
+              <button type="submit" id="submit" class="button button-block">Masuk</button>
               
               </form>
     
@@ -52,7 +52,7 @@
                   <label>
                     Alamat/Instansi
                   </label>
-                  <input type="text" name="instansi"required/>
+                  <input type="text" name="instansi"required autocomplete="off"/>
                 </div>
                 
                 <div class="add-row">
@@ -77,14 +77,14 @@
                   <div id="field-list">
                     <div class="field-wrap">
                       <label>
-                        Nama
+                        Nama 1
                       </label>
                       <input type="text" name="nama[0]" required autocomplete="off"/>
                     </div>
 
                     <div class="field-wrap">
                       <label>
-                        Nama
+                        Nama 2
                       </label>
                       <input type="text" name="nama[1]" required autocomplete="off"/>
                     </div>
