@@ -290,6 +290,7 @@ h5:first-child {
 }
 
 .star {
+  z-index: 1061;
   position: absolute;
   width: 10px; /* Adjust size */
   height: 10px; /* Adjust size */
@@ -301,7 +302,7 @@ h5:first-child {
 }
 
 #wand {
-  z-index: 1052;
+  z-index: 1061;
   position: absolute;
   pointer-events: none;
 }
@@ -320,8 +321,9 @@ h5:first-child {
 }
 
 
-
-
+.swal2-styled:not([disabled]) {
+  cursor: none !important;
+}
 
 .popover {
   position: absolute;
