@@ -11,7 +11,7 @@ $('.form').find('input, textarea, select').on('keyup blur focus', function (e) {
   
     var $this = $(this),
         label = $this.prev('label');
-  
+
         if (e.type === 'keyup') {
           if ($this.val() === '') {
             label.removeClass('active highlight');
@@ -95,7 +95,7 @@ document.addEventListener('mousemove', function(e) {
     const star = document.createElement('div');
     star.className = 'star';
     container.appendChild(star);
-    $('#wand').css({top: `${e.pageY}px`, left: `${e.pageX}px`})
+    $('#wand').css({top: `${e.pageY}px`, left: `${e.pageX}px`});
   
     // Set the initial position of the star
     star.style.left = `${e.pageX}px`;
@@ -115,8 +115,34 @@ document.addEventListener('mousemove', function(e) {
 });
 
 document.addEventListener('click', function(e) {
+  const container = document.body;
+  const stars = [document.createElement('div'), document.createElement('div'), document.createElement('div')];
+  stars.forEach(star => {
+    star.className = 'star';
+    container.appendChild(star);
 
-})
+    // Set the initial position of the star
+    star.style.left = `${e.pageX}px`;
+    star.style.top = `${e.pageY}px`;
+  });
+
+  // Set the animation for the star
+  setTimeout(() => {
+    stars[0].style.transform = 'translate(50%, -300%) scale(2)'; // Moves and grows
+    stars[1].style.transform = 'translate(200%, 50%) scale(2)'; // Moves and grows
+    stars[2].style.transform = 'translate(-150%, 150%) scale(2)'; // Moves and grows
+    stars.forEach(star => {
+      star.style.opacity = '0'; // Fades out
+    });
+  }, 50);
+
+  // Remove the star after the animation
+  setTimeout(() => {
+    stars.forEach(star => {
+      container.removeChild(star);
+    });
+  }, 600); // Should match the longest transition time
+});
 
 $('button, input, select, a, #selecting').on('mouseover', function(e) {
   $('#wand img').css({transform: 'rotate(-30deg) translate(15px, 0px) '})

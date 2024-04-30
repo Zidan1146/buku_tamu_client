@@ -7,10 +7,11 @@
         <title>OPEN HOUSE 2024!</title>
         <link rel="stylesheet" href="{{ asset('select2\dist\css\select2.min.css') }}"/>
         <link rel="stylesheet" href="{{ asset('style.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('sweetalert\sweetalert2.css') }}"/>
     </head>
     <body>
       <a href="https://www.flaticon.com/free-icons/wand" title="wand icons" id="credit">Wand icons created by Freepik - Flaticon</a>
-        <div class="form">
+      <div class="form">
           <h1>OPEN HOUSE</h1>
           <h2>REKAYASA PERANGKAT LUNAK</h2>
           <ul class="tab-group">
@@ -100,18 +101,31 @@
           </div><!-- tab-content -->
           
       </div> <!-- /form -->
-      @if (session('success'))
-        <div class="popover success">
-          <div class="content">
-            <p style="font-size: 2em;">Success!</p>
-          </div>
+      <div id="data">
+        <div class="Jumat">
+          <h5>Tamu Hari Jumat</h5>
+          <h5>{{$Jumat}}</h5>
         </div>
-      @endif
+        <div class="Sabtu">
+          <h5>Tamu Hari Sabtu</h5>
+          <h5>{{$Sabtu}}</h5>
+        </div>
+        <div class="Total">
+          <h5>Tamu Total</h5>
+          <h5>{{$Total}}</h5>
+        </div>
+      </div>
       <div id="wand">
         <img src="{{ asset('magic-wand.png')}}" alt="">
       </div>
       <script src="{{ asset('jquery.js')}}"></script>
       <script src="{{ asset('select2\dist\js\select2.min.js')}}"></script>
+      <script src="{{ asset('sweetalert\sweetalert2.js')}}"></script>
+      @if (session('success'))
+        <script>
+          Swal.fire("{{session('success')}}", '', 'success');
+        </script>
+      @endif
       <script src="{{ asset('script.js')}}"></script>
     </body>
 </html>
