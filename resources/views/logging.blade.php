@@ -10,7 +10,7 @@
     </head>
     <body>
       <a href="https://www.flaticon.com/free-icons/wand" title="wand icons" id="credit">Wand icons created by Freepik - Flaticon</a>
-        <div class="form">
+      <div class="form">
           <h1>OPEN HOUSE</h1>
           <h2>REKAYASA PERANGKAT LUNAK</h2>
           <ul class="tab-group">
@@ -100,6 +100,20 @@
           </div><!-- tab-content -->
           
       </div> <!-- /form -->
+      <div id="data">
+        <div class="Jumat">
+          <h5>Tamu Hari Jumat</h5>
+          <h5>{{$Jumat}}</h5>
+        </div>
+        <div class="Sabtu">
+          <h5>Tamu Hari Sabtu</h5>
+          <h5>{{$Sabtu}}</h5>
+        </div>
+        <div class="Total">
+          <h5>Tamu Total</h5>
+          <h5>{{$Total}}</h5>
+        </div>
+      </div>
       @if (session('success'))
         <div class="popover success">
           <div class="content">

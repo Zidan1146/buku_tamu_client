@@ -27,7 +27,14 @@
 
 @font-face {
   font-family: 'Harry P';
-  src: url('harry_p/HARRYP__.TTF') format('truetype');
+  src: url('font/HARRYP__.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('font/Lexend-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -55,7 +62,7 @@ a:hover {
   background:rgba(var(--form-bg),.7);
   padding: 40px;
   max-width:600px;
-  margin:100px auto 0px;
+  margin:50px auto 0px;
   border-radius:var(--br);
   box-shadow:0 4px 10px 4px rgba(var(--form-bg),.3);
 }
@@ -254,6 +261,32 @@ select *{
 /* width */
 ::-webkit-scrollbar {
   width: .2em;
+}
+
+
+#data {
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px auto;
+}
+
+#data > div {
+  background:rgba(var(--form-bg),.7);
+  width: 30%;
+}
+
+h5 {
+  font-size: 30px;
+  text-align: center;
+  margin: 15px 0px;
+  color:var(--gray);
+}
+
+h5:first-child {
+  font-family: 'Lexend';
+  font-size: 20px;
 }
 
 .star {
