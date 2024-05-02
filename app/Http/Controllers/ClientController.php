@@ -10,11 +10,11 @@ class ClientController extends Controller
 {
 
     function login(Request $request){
-        $isAdminActive = Admin::where('status', 'active')->exists();
+        // $isAdminActive = Admin::where('status', 'active')->exists();
 
-        if(!$isAdminActive){
-            return redirect('/error');
-        }
+        // if(!$isAdminActive){
+        //     return redirect('/error');
+        // }
 
         $request->validate([
             "nama"=>"required",
@@ -37,11 +37,11 @@ class ClientController extends Controller
     }
 
     function logging(){
-        $isAdminActive = Admin::where('status', 'active')->exists();
+        // $isAdminActive = Admin::where('status', 'active')->exists();
 
-        if(!$isAdminActive){
-            return redirect('/error');
-        }
+        // if(!$isAdminActive){
+        //     return redirect('/error');
+        // }
 
         $Jumat = Client::whereDate('created_at', '=', '2024-05-03')->count();
         $Sabtu = Client::whereDate('created_at', '=', '2024-05-04')->count();
