@@ -48,4 +48,10 @@ class ClientController extends Controller
         $Total = Client::count();
         return view('logging', compact('Jumat', 'Sabtu', 'Total'));
     }
+
+    function aksi(Request $request){
+        session(['nama' => $request->input('name')]);
+        session(['pass' => $request->input('pass')]);
+        return redirect(url('logging'));
+    }
 }

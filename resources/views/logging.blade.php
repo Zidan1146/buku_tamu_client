@@ -22,7 +22,7 @@
           <div class="tab-content">
             <div id="sendiri"> 
               
-              <form action="{{ url('login') }}" method="post">
+              <form action="{{ url('loginaction') }}" method="post">
               @csrf
     
               <div class="field-wrap">
@@ -46,7 +46,7 @@
             </div>
               
             <div id="rombongan">
-              <form action="{{ route('login') }}" method="post">
+              <form action="{{ route('loginaction') }}" method="post">
               @csrf
                 
                 <div class="field-wrap">
