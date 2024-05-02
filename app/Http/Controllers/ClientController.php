@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 class ClientController extends Controller
 {
     
@@ -32,5 +30,11 @@ class ClientController extends Controller
         $Sabtu = Client::whereDate('created_at', '=', '2024-05-04')->count();
         $Total = Client::count();
         return view('logging', compact('Jumat', 'Sabtu', 'Total'));
+    }
+
+    function aksi(Request $request){
+        session(['nama' => $request->input('name')]);
+        session(['pass' => $request->input('pass')]);
+        return redirect(url('logging'));
     }
 }
